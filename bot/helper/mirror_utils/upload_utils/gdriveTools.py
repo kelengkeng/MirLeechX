@@ -165,7 +165,7 @@ class GoogleDriveHelper:
         # File body description
         file_metadata = {
             'name': file_name,
-            'description': '',
+            'description': file_name,
             'mimeType': mime_type,
         }
         try:
@@ -480,7 +480,7 @@ class GoogleDriveHelper:
     def create_directory(self, directory_name, parent_id):
         file_metadata = {
             "name": directory_name,
-            "description": "",
+            "description": directory_name,
             "mimeType": self.__G_DRIVE_DIR_MIME_TYPE
         }
         if parent_id is not None:
